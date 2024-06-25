@@ -1,0 +1,27 @@
+{
+  "name": "zomber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rbxts/compiler-types": "^2.3.0-types.1",
+    "@rbxts/types": "^1.0.783",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-roblox-ts": "^0.0.36",
+    "rbxts-transformer-flamework": "^1.2.3",
+    "roblox-ts": "^2.3.0",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@flamework/core": "^1.2.3"
+  }
+}
