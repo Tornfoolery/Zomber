@@ -13,6 +13,8 @@ const Enemies: {[ID: string]: {
     Module: ModuleInterface,
 }} = {}
 
+const EnemyIDs: string[] = [];
+
 export function NewEnemy(Name: string) {
     const Module: ModuleInterface = EnemyModules[Name];
     if (!Module) { return }
@@ -23,10 +25,23 @@ export function NewEnemy(Name: string) {
         Module.New(NewModel);
         NewModel.Parent = EnemyFolder;
 
-        const ID = HttpService.GenerateGUID();
+        const ID = HttpService.GenerateGUID() as string;
         Enemies[ID] = {
             Model: NewModel,
             Module: Module,
-        }
+        };
+
+        EnemyIDs.push(ID);
+    }
+}
+
+export function UpdateEnemy() {
+    
+}
+
+export function UpdateEnemies() {
+    for (const ID of EnemyIDs) {
+        const Enemy = Enemies[ID];
+        
     }
 }
